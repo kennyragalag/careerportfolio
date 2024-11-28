@@ -57,7 +57,7 @@ export const SocialLinks = () => {
             }
           >
             <a
-              href={`${process.env.PUBLIC_URL}/resumeKennyFebGalagar.pdf`}
+              href={`${process.env.PUBLIC_URL}/resumeKennyGalagar.pdf`}
               className="flex justify-between items-center w-full text-white"
               download={download}
               target="_blank"
