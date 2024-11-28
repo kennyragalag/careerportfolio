@@ -1,12 +1,19 @@
 import React from "react";
-import html from "../assets/html.png";
-import css from "../assets/css.png";
-import reactImage from "../assets/reactImage.png";
-import javascript from "../assets/javascript.png";
-import java from "../assets/java.png";
-import springboot from "../assets/springboot.png";
-import github from "../assets/github.png";
-import microservices from "../assets/microservices.png";
+import html from "../assets/experiences/html.png";
+import css from "../assets/experiences/css.png";
+import reactImage from "../assets/experiences/reactImage.png";
+import javascript from "../assets/experiences/javascript.png";
+import java from "../assets/experiences/java.png";
+import springboot from "../assets/experiences/springboot.png";
+import github from "../assets/experiences/github.png";
+import microservices from "../assets/experiences/microservices.png";
+import docker from "../assets/experiences/docker.png";
+import aws from "../assets/experiences/aws.png";
+import jenkins from "../assets/experiences/jenkins.png";
+import jira from "../assets/experiences/jira.png";
+import kubernetes from "../assets/experiences/kubernetes.png";
+import mysql from "../assets/experiences/mysql.png";
+import postgresql from "../assets/experiences/postgresql.png";
 
 const Experience = () => {
   const techs = [
@@ -32,7 +39,7 @@ const Experience = () => {
       id: 4,
       src: reactImage,
       title: "React",
-      style: "shadow-blue-600",
+      style: "shadow-cyan-600",
     },
     {
       id: 5,
@@ -50,13 +57,55 @@ const Experience = () => {
       id: 7,
       src: github,
       title: "Github",
-      style: "shadow-gray-400",
+      style: "shadow-gray-500",
     },
     {
       id: 8,
       src: microservices,
       title: "Microservices",
-      style: "shadow-blue-400",
+      style: "shadow-blue-500",
+    },
+    {
+      id: 9,
+      src: docker,
+      title: "Docker",
+      style: "shadow-cyan-500",
+    },
+    {
+      id: 10,
+      src: aws,
+      title: "AWS",
+      style: "shadow-orange-500",
+    },
+    {
+      id: 11,
+      src: jenkins,
+      title: "Jenkins",
+      style: "shadow-red-500",
+    },
+    {
+      id: 12,
+      src: jira,
+      title: "Jira",
+      style: "shadow-blue-500",
+    },
+    {
+      id: 13,
+      src: kubernetes,
+      title: "Kubernetes",
+      style: "shadow-blue-500",
+    },
+    {
+      id: 14,
+      src: mysql,
+      title: "MySQL",
+      style: "shadow-orange-500",
+    },
+    {
+      id: 14,
+      src: postgresql,
+      title: "PostreSQL",
+      style: "shadow-cyan-500",
     },
   ];
   return (

@@ -1,5 +1,5 @@
 import React from "react";
-import HeroImage from "../assets/heroImage1.jpg";
+import HeroImage from "../assets/experiences/heroImage1.jpg";
 import { ImArrowRight } from "react-icons/im";
 import { Link } from "react-scroll";
 
@@ -12,11 +12,11 @@ const Home = () => {
       <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row">
         <div className="flex flex-col justify-center h-full">
           <h2 className="text-3xl sm:text-5xl font-bold text-white">
-            I'm a Software Engineer / Front End Developer
+            I'm a Software Developer / Software Engineer
           </h2>
           <p className="text-gray-500 py-4 max-w-md">
-            I code, photograph and create web elements for amazing people around
-            the world. I like work with new people. New people new Experiences.
+            "Hi, I'm Kenny Feb Galagar, I enjoy creating software solutions and
+            tackling challenging problems."
           </p>
 
           <div>

@@ -13,16 +13,23 @@ const About = () => {
           </p>
         </div>
         <p className="text-xl mt-20">
-          My name is Kenny Feb Galagar. I am a Front End Developer and Software
-          Engineer
+          Hello, my name is Kenny Feb Galagar. I am Software Engineer / Software
+          Developer
         </p>
         <br />
-        <p className="text-xl">
+        <p className="text-xl justify-normal">
           A committed and well-motivated young person who aspires to obtain any
           Engineering, Web Developer and Software Engineer position that
           compensates my qualifications through the best of my knowledge,
           capabilities, and skills to bring out and harness the best of my
-          potentials for the Glory of God and for the benefit of the company.
+          potentials and for the benefit of the company.
+        </p>
+        <br />
+        <p className="text-xl justify-normal">
+          Specializing in backend development, frontend development, and
+          full-stack development. I have experience working on Java, JavaScript,
+          Spring Boot, React, AWS, MySQL, PostgreSQL, Docker, Kubernetes,
+          Jenkins, Git and Jira, and love building innovative solutions.
         </p>
       </div>
     </div>
