@@ -1,6 +1,31 @@
 import React from "react";
+import Swal from "sweetalert2";
 
 const Contact = () => {
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+
+    formData.append("access_key", "e1a70ff1-0550-487f-81dc-d825aad4594f");
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData,
+    });
+
+    const data = await response.json();
+
+    if (data.success) {
+      Swal.fire({
+        title: "Success!",
+        text: "Form Submitted Successfully!",
+        icon: "success",
+        timer: 1500,
+      });
+      event.target.reset();
+    }
+  };
+
   return (
     <div
       name="contact"
@@ -16,29 +41,43 @@ const Contact = () => {
 
         <div className=" flex justify-center items-center">
           <form
-            action="https://getform.io/f/aaf43a1c-9538-4f69-9a53-efd1bad664c8"
+            onSubmit={onSubmit}
             method="POST"
             className=" flex flex-col w-full md:w-1/2"
           >
             <input
+              type="hidden"
+              name="from_name"
+              value="Carreer Portfolio"
+            ></input>
+            <input
               type="text"
               name="name"
+              required
               placeholder="Enter your name"
               className="p-2 bg-transparent border-2 rounded-md text-white focus:outline-none"
             />
             <input
-              type="text"
+              type="email"
               name="email"
+              required
               placeholder="Enter your email"
               className="my-4 p-2 bg-transparent border-2 rounded-md text-white focus:outline-none"
             />
+            <input
+              type="text"
+              name="subject"
+              required
+              placeholder="Subject"
+              className="p-2 bg-transparent border-2 rounded-md text-white focus:outline-none"
+            />
             <textarea
               name="message"
+              required
               placeholder="Enter your message"
               rows="10"
-              className="p-2 bg-transparent border-2 rounded-md text-white focus:outline-none"
+              className="my-4 p-2 bg-transparent border-2 rounded-md text-white focus:outline-none"
             ></textarea>
-
             <button className="text-white bg-gradient-to-b from-cyan-500 to-blue-500 px-6 py-3 my-8 mx-auto flex items-center rounded-md hover:scale-110 duration-300">
               Send Message
             </button>
