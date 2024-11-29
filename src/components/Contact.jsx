@@ -48,7 +48,7 @@ const Contact = () => {
             <input
               type="hidden"
               name="from_name"
-              value="Carreer Portfolio"
+              value="Career Portfolio"
             ></input>
             <input
               type="text"
