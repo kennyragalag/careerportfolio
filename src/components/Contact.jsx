@@ -1,14 +1,9 @@
 import React from "react";
-import { Alert, Button } from "@material-tailwind/react";
-import { FaCheckCircle } from "react-icons/fa";
+import Swal from "sweetalert2";
 
 const Contact = () => {
-  const [result, setResult] = React.useState("");
-  const [open, setOpen] = React.useState(true);
-
   const onSubmit = async (event) => {
     event.preventDefault();
-    setResult("Sending....");
     const formData = new FormData(event.target);
 
     formData.append("access_key", "e1a70ff1-0550-487f-81dc-d825aad4594f");
@@ -21,20 +16,22 @@ const Contact = () => {
     const data = await response.json();
 
     if (data.success) {
-      setResult("Form Submitted Successfully");
+      Swal.fire({
+        title: "Success!",
+        text: "Form Submitted Successfully!",
+        icon: "success",
+        timer: 1500,
+      });
       event.target.reset();
-    } else {
-      console.log("Error", data);
-      setResult(data.message);
     }
   };
 
   return (
     <div
       name="contact"
-      className="w-full h-screen bg-gradient-to-b from-black to-gray-800 p-4 text-white"
+      className="bg-gradient-to-b from-black to-gray-800 p-4 text-white md:h-auto"
     >
-      <div className="flex flex-col p-4 justify-center max-w-screen-lg mx-auto h-full">
+      <div className="flex flex-col p-4 justify-center max-w-screen-lg mx-auto w-full">
         <div className="pb-8">
           <p className="text-4xl font-bold inline border-b-4 border-gray-500">
             Contact
@@ -49,6 +46,11 @@ const Contact = () => {
             className=" flex flex-col w-full md:w-1/2"
           >
             <input
+              type="hidden"
+              name="from_name"
+              value="Career Portfolio"
+            ></input>
+            <input
               type="text"
               name="name"
               required
@@ -56,7 +58,7 @@ const Contact = () => {
               className="p-2 bg-transparent border-2 rounded-md text-white focus:outline-none"
             />
             <input
-              type="text"
+              type="email"
               name="email"
               required
               placeholder="Enter your email"
@@ -76,33 +78,10 @@ const Contact = () => {
               rows="10"
               className="my-4 p-2 bg-transparent border-2 rounded-md text-white focus:outline-none"
             ></textarea>
-            <>
-              {/* {!open && (
-                <Button
-                  className="absolute text-white bg-gradient-to-b from-cyan-500 to-blue-500 px-6 py-3 my-8 mx-auto flex items-center rounded-md hover:scale-110 duration-300"
-                  onClick={() => setOpen(true)}
-                >
-                  Send Message
-                </Button>
-              )} */}
-              {/* <Alert
-                open={open}
-                className="bg-green-500 max-w-screen-md"
-                icon={<FaCheckCircle />}
-                onClose={() => setOpen(false)}
-              >
-                <span>{result}</span>
-              </Alert> */}
-
-              <button
-                onClick={() => setOpen(true)}
-                className="text-white bg-gradient-to-b from-cyan-500 to-blue-500 px-6 py-3 my-8 mx-auto flex items-center rounded-md hover:scale-110 duration-300"
-              >
-                Send Message
-              </button>
-            </>
+            <button className="text-white bg-gradient-to-b from-cyan-500 to-blue-500 px-6 py-3 my-8 mx-auto flex items-center rounded-md hover:scale-110 duration-300">
+              Send Message
+            </button>
           </form>
-          {/* <span>{result}</span> */}
         </div>
       </div>
     </div>

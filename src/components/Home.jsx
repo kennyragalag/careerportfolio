@@ -7,10 +7,10 @@ const Home = () => {
   return (
     <div
       name="home"
-      className="h-screen w-full bg-gradient-to-b from-black via-black to-gray-800"
+      className="md:h-auto md:p-12 bg-gradient-to-b from-black via-black to-gray-800 p-12"
     >
-      <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row">
-        <div className="flex flex-col justify-center h-full">
+      <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center w-full p-12 md:flex-row">
+        <div className="flex flex-col justify-center w-1/2 pb-8">
           <h2 className="text-3xl sm:text-5xl font-bold text-white">
             I'm a Software Developer / Software Engineer
           </h2>
@@ -28,7 +28,7 @@ const Home = () => {
             >
               Portfolio
               <span className="group-hover:rotate-90 duration-300">
-                <ImArrowRight size={20} className="ml-1" />
+                <ImArrowRight size={15} className="ml-1" />
               </span>
             </Link>
           </div>
@@ -38,7 +38,7 @@ const Home = () => {
           <img
             src={HeroImage}
             alt="my profile"
-            className="rounded-2xl mx-auto w-2/3"
+            className="rounded-2xl mx-auto w-1/2"
           />
         </div>
       </div>
